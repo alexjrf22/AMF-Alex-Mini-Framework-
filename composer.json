@@ -1,0 +1,19 @@
+{   
+
+    "autoload": 
+    {
+        "psr-4": 
+        {
+            "AMF\\": "vendor/AMF/",
+            "App\\": "App/"
+        }
+    },
+    
+    "authors": 
+    [   
+        {
+            "name": "Alexandre Ferreira",
+            "email": "alexjrf22@gmail.com"
+        }
+    ]
+}
