@@ -1,11 +1,17 @@
-# DI 
+# Alex Micro-Framework (AMF)
 
 #Descrição 
 
-Estou retornando ao desenvolvimento PHP e apenas como uma forma de recomeçar, resolvir fazer um crud bem simples,
-O sistema Web proposto consiste em inserir, listar, deletar e atualizar os dados de um cliente. Cliente esse que terá
-id, nome, e-mail. O sistema é escrito em PHP, orientado a objetos e faz conexão com um banco de dados MYSQL. Para efetuar a conexão foi utilizado o
-PDO. 
+É um mini-framework MVC que visa facilitar a criaçao de rotas, definir as responsabilidades de forma clara dentro do sistema e exibir de forma simples as views aos usuarios. OBS: foi feito um select de clientes para teste, facilitando assim entender o funcionamento.
+
+#Conhecimentos Aplicados
+
+*PHP OO;
+*MVC;
+*Composer;
+*MYSQL;
+*HTML
+
 
 #Dependencias Para o Funcionamento do Sistema 
 
@@ -17,9 +23,36 @@ PDO.
 #Como instalar
 
 1. Faça um clone do repositorio;
-2. Utilize o mysql e crie um banco de dados com o nome de DI.
-3. Create database DI;
-2. Acesse o sistema através do servidor web;
-3. Acesse atraves do navegador a pagina fixture.php Ex: localhost:8080/fixture.php
-4. Isso criará a tabela dentro do banco de dados DI.
-5. Acesse atraves do navegador o index.php e utilize o sistema.
+2. Acesse atraves do navegador a pagina fixture.php Ex: localhost:8080/App/fixture.php...
+3. Isso criará automaticamente o banco de dados e a tabela.
+4. Acesse atraves do navegador o localhost:8080/public/index.php e utilize o sistema.
+
+#Como funciona o Sistema
+
+- Dentro da pasta vendor/AMF do composer foram criadas 4 pastas:
+*Pasta: Controller / Arquivo: Action.php / Funcionalidade: das Include nas views do sistema.
+*Pasta: DI / Arquivo: Container.php / Funcionalidade: Criar Containers de serviços, jã vai com container de conexao com BD como exemplo.
+*Pasta: Init / Arquivo: Bootstrap.php / Funcionalidade: Pegar as rotas setadas do sistema, criar as urls e iniciar as mesmas.
+*Pasta: Model / Arquivo: Table.php / Funcionalidade: Criar os metodos que farão as alterações no BD, como exemplo foi criado um FetchAll que exibe todos os dados de uma tabela.
+
+###Fora do Framework a estrutura deverá ser a seguinte:
+-Deverá ter uma Pasta APP dentro dela os diretorios: Controllers, Models e Views;
+*Pasta: Controllers / arquivo: IndexController / Extends: Action.php / Funcionalidade: Definir o controller, o que deve ser mostrado na view do controller ex: consulta no BD e renderizar a view do controller. 
+*Pasta Models / arquivo: "Entidade".php / Extends: Table / Funcionalidade: Implemetar a entidade e definir qual tabela do BD deve ser alterada. Vai com a entidade Cliente de exemplo.
+*Pasta Views arquivo: layout.phtml definir um layout padrão / pasta index-> armazenar as views do sistema. Vai com uma view de exemplo.
+*Arquivo Route.php: Definir as rotas do sistema dentro deste arquivo. Exemplo no arquivo.
+*arquivo Conn.php: Criar conexao com BD.
+*fixture.php criar automaticamente o BD.
+
+#pasta public 
+-dentro desta pasta fica o index.php:
+*deve requerer o autoload;
+*deve instanciar a classe Route...$route = new App\Route();
+-Dentro tbm se necessario colocar o .htaccess
+
+
+
+
+
+
+
