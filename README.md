@@ -6,12 +6,12 @@
 
 #Conhecimentos Aplicados
 
-*PHP OO;
-*MVC;
-*Composer;
-*PDO;
-*MYSQL;
-*HTML
+* PHP OO;
+* MVC;
+* Composer;
+* PDO;
+* MYSQL;
+* HTML
 
 
 #Dependencias Para o Funcionamento do Sistema 
@@ -31,24 +31,24 @@
 #Como funciona o Sistema
 
 - Dentro da pasta vendor/AMF do composer foram criadas 4 pastas:
-*Pasta: Controller / Arquivo: Action.php / Funcionalidade: das Include nas views do sistema.
-*Pasta: DI / Arquivo: Container.php / Funcionalidade: Criar Containers de serviços, jã vai com container de conexao com BD como exemplo.
-*Pasta: Init / Arquivo: Bootstrap.php / Funcionalidade: Pegar as rotas setadas do sistema, criar as urls e iniciar as mesmas.
-*Pasta: Model / Arquivo: Table.php / Funcionalidade: Criar os metodos que farão as alterações no BD, como exemplo foi criado um FetchAll que exibe todos os dados de uma tabela.
+* Pasta: Controller / Arquivo: Action.php / Funcionalidade: das Include nas views do sistema.
+* Pasta: DI / Arquivo: Container.php / Funcionalidade: Criar Containers de serviços, jã vai com container de conexao com BD como exemplo.
+* Pasta: Init / Arquivo: Bootstrap.php / Funcionalidade: Pegar as rotas setadas do sistema, criar as urls e iniciar as mesmas.
+* Pasta: Model / Arquivo: Table.php / Funcionalidade: Criar os metodos que farão as alterações no BD, como exemplo foi criado um FetchAll que exibe todos os dados de uma tabela.
 
 ###Fora do Framework a estrutura deverá ser a seguinte:
 -Deverá ter uma Pasta APP dentro dela os diretorios: Controllers, Models e Views;
-*Pasta: Controllers / arquivo: IndexController / Extends: Action.php / Funcionalidade: Definir o controller, o que deve ser mostrado na view do controller ex: consulta no BD e renderizar a view do controller. 
-*Pasta Models / arquivo: "Entidade".php / Extends: Table / Funcionalidade: Implemetar a entidade e definir qual tabela do BD deve ser alterada. Vai com a entidade Cliente de exemplo.
-*Pasta Views arquivo: layout.phtml definir um layout padrão / pasta index-> armazenar as views do sistema. Vai com uma view de exemplo.
-*Arquivo Route.php: Definir as rotas do sistema dentro deste arquivo. Exemplo no arquivo.
-*arquivo Conn.php: Criar conexao com BD.
-*fixture.php criar automaticamente o BD.
+* Pasta: Controllers / arquivo: IndexController / Extends: Action.php / Funcionalidade: Definir o controller, o que deve ser mostrado na view do controller ex: consulta no BD e renderizar a view do controller. 
+* Pasta Models / arquivo: "Entidade".php / Extends: Table / Funcionalidade: Implemetar a entidade e definir qual tabela do BD deve ser alterada. Vai com a entidade Cliente de exemplo.
+* Pasta Views arquivo: layout.phtml definir um layout padrão / pasta index-> armazenar as views do sistema. Vai com uma view de exemplo.
+* Arquivo Route.php: Definir as rotas do sistema dentro deste arquivo. Exemplo no arquivo.
+* arquivo Conn.php: Criar conexao com BD.
+* fixture.php criar automaticamente o BD.
 
 #pasta public 
 -dentro desta pasta fica o index.php:
-*deve requerer o autoload;
-*deve instanciar a classe Route...$route = new App\Route();
+* deve requerer o autoload;
+* deve instanciar a classe Route...$route = new App\Route();
 -Dentro tbm se necessario colocar o .htaccess
 
 
