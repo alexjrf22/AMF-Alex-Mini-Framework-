@@ -9,6 +9,7 @@
 *PHP OO;
 *MVC;
 *Composer;
+*PDO;
 *MYSQL;
 *HTML
 
