@@ -36,7 +36,7 @@
 * Pasta: Init / Arquivo: Bootstrap.php / Funcionalidade: Pegar as rotas setadas do sistema, criar as urls e iniciar as mesmas.
 * Pasta: Model / Arquivo: Table.php / Funcionalidade: Criar os metodos que farão as alterações no BD, como exemplo foi criado um FetchAll que exibe todos os dados de uma tabela.
 
-###Fora do Framework a estrutura deverá ser a seguinte:
+#Fora do Framework a estrutura deverá ser a seguinte:
 -Deverá ter uma Pasta APP dentro dela os diretorios: Controllers, Models e Views;
 * Pasta: Controllers / arquivo: IndexController / Extends: Action.php / Funcionalidade: Definir o controller, o que deve ser mostrado na view do controller ex: consulta no BD e renderizar a view do controller. 
 * Pasta Models / arquivo: "Entidade".php / Extends: Table / Funcionalidade: Implemetar a entidade e definir qual tabela do BD deve ser alterada. Vai com a entidade Cliente de exemplo.
